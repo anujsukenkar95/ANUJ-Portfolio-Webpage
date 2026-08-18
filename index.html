@@ -63,37 +63,49 @@
   section { position: relative; z-index: 1; padding: 100px 0; }
   .container { max-width: 1550px; margin: 0 auto; padding: 0 2.5%; }
 
-  /* ===== HERO ===== */
+  /* ===== HERO SECTION STYLING ===== */
   #hero { min-height: 100vh; display: flex; align-items: center; padding: 100px 2.5% 80px; position: relative; overflow: hidden; }
   .hero-grid-bg { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(79,142,247,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(79,142,247,0.04) 1px, transparent 1px); background-size: 100px 100px; }
   .hero-inner { position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 3rem; align-items: center; }
   .hero-content { max-width: 680px; min-width: 0; }
+  
   .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 50px; border: 1px solid rgba(0,212,180,0.3); background: rgba(0,212,180,0.06); font-size: 0.8rem; color: var(--accent3); margin-bottom: 1.5rem; }
   .hero-badge::before { content: ''; width: 7px; height: 7px; background: var(--accent3); border-radius: 50%; animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.5)} }
 
   .hero-title { font-family: var(--font-display); font-size: clamp(2.8rem, 5.2vw, 4.8rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1.2rem; color: #fff; }
   .hero-title .line2 { background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 50%, var(--accent3) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  
   .typing-cursor { display: inline-block; width: 3px; height: 0.8em; background: var(--accent3); margin-left: 3px; vertical-align: middle; animation: blink 0.85s step-end infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
   .hero-sub { font-size: clamp(0.95rem, 1.8vw, 1.125rem); color: var(--text2); font-weight: 300; max-width: 540px; margin-bottom: 2.5rem; line-height: 1.65; }
+
+  /* ===== HERO BUTTONS & SOCIALS ===== */
+  .hero-btns-wrapper { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
   .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-  /* ===== PROFILE PHOTO (Hero) ===== */
-  .hero-photo-wrap { position: relative; width: 100%; display: flex; justify-content: center; align-items: center; }
-  .hero-photo-glow { position: absolute; width: 320px; height: 320px; background: radial-gradient(circle, rgba(79,142,247,0.25) 0%, transparent 70%); border-radius: 50%; filter: blur(40px); z-index: 0; pointer-events: none; }
-  .hero-photo-wrap img { position: relative; z-index: 1; width: 100%; max-width: 420px; height: auto; object-fit: contain; filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5)); transition: transform 0.4s ease; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 0.85rem 2rem; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; font-weight: 600; font-size: 0.9rem; border-radius: 50px; border: none; cursor: pointer; transition: opacity 0.2s, transform 0.2s; }
+  .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
+
+  .btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 0.85rem 2rem; background: rgba(255,255,255,0.05); color: var(--text); font-weight: 500; font-size: 0.9rem; border-radius: 50px; border: 1px solid var(--border2); cursor: pointer; transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .btn-secondary:hover { background: var(--surface2); border-color: var(--accent); transform: translateY(-2px); }
+  .btn-secondary svg { color: var(--accent3); flex-shrink: 0; }
+
+  .hero-social-links { display: flex; gap: 0.75rem; align-items: center; }
+  .hero-social-btn { width: 44px; height: 44px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border2); display: flex; align-items: center; justify-content: center; color: var(--text2); transition: all 0.2s ease; }
+  .hero-social-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(79,142,247,0.1); transform: translateY(-2px); }
+
+  /* ===== PROFILE PHOTO (Hero - Enlarged to Match Height) ===== */
+  .hero-photo-wrap { position: relative; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; min-height: 480px; }
+  .hero-photo-glow { position: absolute; width: 450px; height: 450px; background: radial-gradient(circle, rgba(79,142,247,0.3) 0%, transparent 70%); border-radius: 50%; filter: blur(50px); z-index: 0; pointer-events: none; }
+  .hero-photo-wrap img { position: relative; z-index: 1; width: 100%; max-width: 580px; height: auto; max-height: 600px; object-fit: contain; filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.6)); transition: transform 0.4s ease; }
   .hero-photo-wrap img:hover { transform: translateY(-5px); }
-  
+
   .hero-scroll-hint { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--text3); font-size: 0.75rem; letter-spacing: 0.08em; animation: bounce 2s infinite; }
   .scroll-line { width: 1px; height: 35px; background: linear-gradient(var(--accent), transparent); }
   @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
 
-  /* ===== BUTTONS ===== */
-  .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 0.85rem 2rem; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; font-weight: 600; font-size: 0.9rem; border-radius: 50px; border: none; cursor: pointer; transition: opacity 0.2s, transform 0.2s; }
-  .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
-  .btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 0.85rem 2rem; background: transparent; color: var(--text); font-weight: 500; font-size: 0.9rem; border-radius: 50px; border: 1px solid var(--border); cursor: pointer; transition: background 0.2s, border-color 0.2s, transform 0.2s; }
-  .btn-secondary:hover { background: var(--surface2); border-color: var(--text3); transform: translateY(-2px); }
 
   /* ===== SHARED SECTION STYLES ===== */
   .section-label { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
@@ -150,7 +162,7 @@
   .tl-role { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: #fff; }
   .tl-org { font-size: 0.82rem; color: var(--accent); font-weight: 500; margin-top: 2px; }
   .tl-date { font-size: 0.75rem; color: var(--text3); margin-top: 6px; font-weight: 500; }
-  
+
   /* ===== ABOUT ===== */
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
   .about-text p { color: var(--text2); margin-bottom: 1rem; font-size: 1.025rem; }
@@ -213,17 +225,17 @@
 
   /* ===== RESPONSIVE ===== */
   @media (max-width: 960px) {
-    .hero-inner { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+    .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
     .hero-content { margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
     .hero-sub { margin-left: auto; margin-right: auto; }
-    .hero-btns { justify-content: center; }
+    .hero-btns-wrapper { justify-content: center; }
   }
   @media (max-width: 900px) {
     .about-grid, .contact-wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
     .nav-links { display: none; }
     .hamburger { display: block; }
   }
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .center-axis-line { left: 20px; }
     .timeline-row { grid-template-columns: 40px 1fr; gap: 1rem; }
     .timeline-node { grid-column: 1; justify-self: center; }
@@ -277,15 +289,26 @@
         <span class="line2" id="typing-target"></span><span class="typing-cursor" id="typing-cursor"></span>
       </h1>
       <p class="hero-sub">Aspiring Data Analyst | AI &amp; Business Intelligence | BCA Final Year @ Sandip University | Python • SQL • Power BI • MS-EXCEL • Tableau</p>
-      <div class="hero-btns">
-        <a href="#projects" class="btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-          View My Work
-        </a>
-        <a href="https://drive.google.com/file/d/1EMBLrbIjDntzuOUKG5AHSuEmNYG9CFjr/view?usp=drive_link" class="btn-secondary" id="resume-btn" target="_blank">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/></svg>
-          Download Resume
-        </a>
+      <div class="hero-btns-wrapper">
+        <div class="hero-btns">
+          <a href="#projects" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            View My Work
+          </a>
+          <a href="https://drive.google.com/file/d/1EMBLrbIjDntzuOUKG5AHSuEmNYG9CFjr/view?usp=drive_link" class="btn-secondary" id="resume-btn" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/></svg>
+            Download Resume
+          </a>
+        </div>
+        <!-- Social Icon Quick Links -->
+        <div class="hero-social-links">
+          <a href="https://www.linkedin.com/in/anuj-sukenkar-0983532b5" class="hero-social-btn" target="_blank" aria-label="LinkedIn Profile" title="LinkedIn Profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://github.com" class="hero-social-btn" target="_blank" aria-label="GitHub Profile" title="GitHub Profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+        </div>
       </div>
     </div>
     <div class="hero-photo-wrap">
