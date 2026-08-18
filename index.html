@@ -6,7 +6,7 @@
 <title>Anuj Sukenkar — AI & BI Analyst</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
 <style>
-  /* ===== CSS VARIABLES & RESET ===== */
+/* ===== CSS VARIABLES & RESET ===== */
   :root {
     --bg: #05070f;
     --bg2: #0a0d1a;
@@ -46,7 +46,7 @@
   @keyframes floatOrb { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-30px) scale(1.05)} }
 
   /* ===== NAV ===== */
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 5%; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(5,7,15,0.7); border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 2.5%; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(5,7,15,0.7); border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between; height: 64px; }
   .nav-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .nav-links { display: flex; gap: 2rem; align-items: center; }
   .nav-links a { font-size: 0.875rem; font-weight: 500; letter-spacing: 0.03em; color: var(--text2); transition: color 0.2s; }
@@ -54,37 +54,39 @@
   .nav-cta { padding: 0.45rem 1.1rem; border: 1px solid var(--border2); border-radius: 50px; font-size: 0.825rem; font-weight: 500; color: var(--accent) !important; transition: background 0.2s, border-color 0.2s; }
   .nav-cta:hover { background: rgba(79,142,247,0.1); border-color: var(--accent) !important; }
   .hamburger { display: none; background: none; border: none; cursor: pointer; color: var(--text); font-size: 1.4rem; padding: 4px; }
-  .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: rgba(5,7,15,0.97); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 1.5rem 5%; flex-direction: column; gap: 0.5rem; }
+  .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: rgba(5,7,15,0.97); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 1.5rem 2.5%; flex-direction: column; gap: 0.5rem; }
   .mobile-menu.open { display: flex; }
   .mobile-menu a { font-size: 1rem; font-weight: 500; color: var(--text2); padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
   .mobile-menu a:last-child { border: none; }
 
-  /* ===== SECTIONS ===== */
+  /* ===== SECTIONS & CONTAINER ===== */
   section { position: relative; z-index: 1; padding: 100px 0; }
-  .container { max-width: 1120px; margin: 0 auto; padding: 0 5%; }
+  .container { max-width: 1550px; margin: 0 auto; padding: 0 2.5%; }
 
   /* ===== HERO ===== */
-  #hero { min-height: 100vh; display: flex; align-items: center; padding: 100px 5% 80px; position: relative; overflow: hidden; }
+  #hero { min-height: 100vh; display: flex; align-items: center; padding: 100px 2.5% 80px; position: relative; overflow: hidden; }
   .hero-grid-bg { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(79,142,247,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(79,142,247,0.04) 1px, transparent 1px); background-size: 100px 100px; }
-  .hero-inner { position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 3rem; align-items: center; }
+  .hero-inner { position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 3rem; align-items: center; }
   .hero-content { max-width: 680px; min-width: 0; }
   .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 50px; border: 1px solid rgba(0,212,180,0.3); background: rgba(0,212,180,0.06); font-size: 0.8rem; color: var(--accent3); margin-bottom: 1.5rem; }
   .hero-badge::before { content: ''; width: 7px; height: 7px; background: var(--accent3); border-radius: 50%; animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.5)} }
 
-  .hero-title { font-family: var(--font-display); font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1.2rem; color: #fff; }
+  .hero-title { font-family: var(--font-display); font-size: clamp(2.8rem, 5.2vw, 4.8rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1.2rem; color: #fff; }
   .hero-title .line2 { background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 50%, var(--accent3) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .typing-cursor { display: inline-block; width: 3px; height: 0.8em; background: var(--accent3); margin-left: 3px; vertical-align: middle; animation: blink 0.85s step-end infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-  .hero-sub { font-size: clamp(0.95rem, 2vw, 1.15rem); color: var(--text2); font-weight: 300; max-width: 520px; margin-bottom: 2.5rem; line-height: 1.6; }
+  .hero-sub { font-size: clamp(0.95rem, 1.8vw, 1.125rem); color: var(--text2); font-weight: 300; max-width: 540px; margin-bottom: 2.5rem; line-height: 1.65; }
   .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-  /* ===== PROFILE PHOTO (Hero) - REFACTORED ===== */
+  /* ===== PROFILE PHOTO (Hero) ===== */
   .hero-photo-wrap { position: relative; width: 100%; display: flex; justify-content: center; align-items: center; }
-  .hero-photo-wrap img { width: 100%; max-width: 450px; height: auto; object-fit: contain; filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.4)); }
+  .hero-photo-glow { position: absolute; width: 320px; height: 320px; background: radial-gradient(circle, rgba(79,142,247,0.25) 0%, transparent 70%); border-radius: 50%; filter: blur(40px); z-index: 0; pointer-events: none; }
+  .hero-photo-wrap img { position: relative; z-index: 1; width: 100%; max-width: 420px; height: auto; object-fit: contain; filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5)); transition: transform 0.4s ease; }
+  .hero-photo-wrap img:hover { transform: translateY(-5px); }
   
-  .hero-scroll-hint { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--text3); font-size: 0.75rem; letter-spacing: 0.08em; animation: bounce 2s infinite; }
-  .scroll-line { width: 1px; height: 40px; background: linear-gradient(var(--accent), transparent); }
+  .hero-scroll-hint { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--text3); font-size: 0.75rem; letter-spacing: 0.08em; animation: bounce 2s infinite; }
+  .scroll-line { width: 1px; height: 35px; background: linear-gradient(var(--accent), transparent); }
   @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
 
   /* ===== BUTTONS ===== */
@@ -96,10 +98,10 @@
   /* ===== SHARED SECTION STYLES ===== */
   .section-label { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
   .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15; color: #fff; margin-bottom: 1.5rem; }
-  .section-divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border2), transparent); margin: 0 5%; }
+  .section-divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border2), transparent); margin: 0 2.5%; }
 
   /* ===== SKILLS ===== */
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
   .skill-category { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; transition: border-color 0.3s, background 0.3s; }
   .skill-category:hover { border-color: var(--border2); background: var(--surface2); }
   .skill-cat-icon { width: 44px; height: 44px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1rem; }
@@ -112,7 +114,7 @@
   .skill-tag:hover { border-color: var(--accent); color: var(--accent); background: rgba(79,142,247,0.08); }
 
   /* ===== PROJECTS ===== */
-  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
   .project-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
   .project-card:hover { transform: translateY(-6px); border-color: var(--border2); box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 40px var(--glow); }
   .project-visual { height: 200px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; }
@@ -131,19 +133,24 @@
   .project-link { display: flex; align-items: center; gap: 5px; font-size: 0.8rem; font-weight: 600; color: var(--accent3); transition: gap 0.2s; }
   .project-link:hover { gap: 8px; }
 
-  /* ===== EXPERIENCE ===== */
-  .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; }
-  .exp-col-title { font-size: 0.8rem; font-weight: 700; color: var(--accent2); letter-spacing: 0.05em; margin-bottom: 1.5rem; text-transform: uppercase; }
-  .timeline { display: flex; flex-direction: column; }
-  .timeline-item { display: flex; gap: 1rem; }
-  .tl-dot-wrap { display: flex; flex-direction: column; align-items: center; min-width: 12px; }
-  .tl-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); flex-shrink: 0; margin-top: 5px; }
-  .tl-line { width: 2px; background: var(--border); flex: 1; min-height: 30px; margin: 4px 0; }
-  .tl-content { padding-bottom: 2rem; }
-  .tl-role { font-family: var(--font-display); font-size: 0.975rem; font-weight: 700; color: #fff; }
+ /* ===== ALTERNATING TIMELINE STYLING ===== */
+  .timeline-wrapper { position: relative; max-width: 1000px; margin: 3rem auto 0; display: flex; flex-direction: column; gap: 2rem; }
+  .center-axis-line { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; transform: translateX(-50%); background: linear-gradient(to bottom, var(--accent), var(--accent2), var(--border)); z-index: 1; }
+  
+  .timeline-row { display: grid; grid-template-columns: 1fr 40px 1fr; align-items: center; position: relative; z-index: 2; }
+  .timeline-node { width: 14px; height: 14px; background: var(--accent); border: 3px solid var(--bg); border-radius: 50%; justify-self: center; box-shadow: 0 0 10px var(--accent); }
+  
+  .timeline-content { width: 100%; padding: 0 1.5rem; }
+  .row-right .timeline-content { text-align: left; }
+  .row-left .timeline-content { text-align: right; }
+  
+  .timeline-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; backdrop-filter: blur(10px); transition: border-color 0.3s, transform 0.3s; display: inline-block; width: 100%; text-align: inherit; }
+  .timeline-card:hover { border-color: var(--border2); background: var(--surface2); transform: translateY(-3px); }
+  
+  .tl-role { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: #fff; }
   .tl-org { font-size: 0.82rem; color: var(--accent); font-weight: 500; margin-top: 2px; }
-  .tl-date { font-size: 0.75rem; color: var(--text3); margin-top: 3px; }
-
+  .tl-date { font-size: 0.75rem; color: var(--text3); margin-top: 6px; font-weight: 500; }
+  
   /* ===== ABOUT ===== */
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
   .about-text p { color: var(--text2); margin-bottom: 1rem; font-size: 1.025rem; }
@@ -157,7 +164,7 @@
   .focus-badge { display: inline-block; padding: 4px 12px; border-radius: 50px; background: rgba(0,212,180,0.1); border: 1px solid rgba(0,212,180,0.2); font-size: 0.75rem; color: var(--accent3); font-weight: 500; }
 
   /* ===== CERTIFICATIONS ===== */
-  .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin-top: 3rem; }
+  .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.25rem; margin-top: 3rem; }
   .cert-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; display: flex; gap: 1.2rem; align-items: flex-start; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; }
   .cert-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(79,142,247,0.04), transparent); opacity: 0; transition: opacity 0.3s; }
   .cert-card:hover { border-color: rgba(79,142,247,0.35); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.3), 0 0 30px rgba(79,142,247,0.08); }
@@ -168,8 +175,6 @@
   .cert-issuer { font-size: 0.8rem; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
   .cert-desc { font-size: 0.8rem; color: var(--text3); line-height: 1.5; margin-bottom: 10px; }
   .cert-no-link { font-size: 0.77rem; color: var(--text3); font-style: italic; }
-  .cert-link { display: inline-flex; align-items: center; gap: 4px; font-size: 0.77rem; font-weight: 600; color: var(--accent3); transition: gap 0.2s; }
-  .cert-link:hover { gap: 6px; }
 
   /* ===== CONTACT ===== */
   .contact-wrapper { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start; margin-top: 3rem; }
@@ -192,7 +197,7 @@
   .form-submit { width: 100%; }
 
   /* ===== FOOTER ===== */
-  footer { padding: 2rem 5%; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  footer { padding: 2rem 2.5%; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
   .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .footer-copy { font-size: 0.8rem; color: var(--text3); }
   .footer-socials { display: flex; gap: 1rem; }
@@ -214,9 +219,16 @@
     .hero-btns { justify-content: center; }
   }
   @media (max-width: 900px) {
-    .about-grid, .exp-grid, .contact-wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-grid, .contact-wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
     .nav-links { display: none; }
     .hamburger { display: block; }
+  }
+@media (max-width: 768px) {
+    .center-axis-line { left: 20px; }
+    .timeline-row { grid-template-columns: 40px 1fr; gap: 1rem; }
+    .timeline-node { grid-column: 1; justify-self: center; }
+    .row-right .timeline-content, .row-left .timeline-content { grid-column: 2; padding: 0; text-align: left; }
+    .timeline-empty { display: none; }
   }
   @media (max-width: 600px) {
     .projects-grid, .skills-grid, .certs-grid { grid-template-columns: 1fr; }
@@ -277,6 +289,7 @@
       </div>
     </div>
     <div class="hero-photo-wrap">
+      <div class="hero-photo-glow"></div>
       <img id="profile-photo-img" src="profile%20pic.png" alt="Anuj Sukenkar" />
     </div>
   </div>
@@ -291,39 +304,47 @@
   <div class="container">
     <div class="reveal" style="text-align:center; max-width:540px; margin:0 auto 3rem;">
       <span class="section-label">Skill Matrix</span>
-      <h2 class="section-title">Technical Expertise</h2>
-      <p style="color:var(--text2); font-size:0.95rem;">A blend of analytics, AI, and development tools to build end-to-end data solutions.</p>
+      <h2 class="section-title">Technical &amp; Professional Expertise</h2>
+      <p style="color:var(--text2); font-size:0.95rem;">A comprehensive blend of programming, data analytics, AI tools, and professional soft skills.</p>
     </div>
     <div class="skills-grid" id="skills-grid">
       <div class="skill-category reveal">
         <div class="skill-cat-icon icon-blue">📊</div>
-        <div class="skill-cat-title">Data Analytics & BI</div>
+        <div class="skill-cat-title">Data Analytics &amp; BI</div>
         <div class="skill-tags">
+          <span class="skill-tag">Data Analysis</span>
+          <span class="skill-tag">Data Cleaning</span>
+          <span class="skill-tag">EDA</span>
+          <span class="skill-tag">Data Visualization</span>
           <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Tableau</span>
           <span class="skill-tag">MS-Excel</span>
-          <span class="skill-tag">Data Analytics</span>
-          <span class="skill-tag">PivotTables</span>
-          <span class="skill-tag">Dashboard Design</span>
+          <span class="skill-tag">Big Data</span>
         </div>
       </div>
       <div class="skill-category reveal reveal-delay-1">
         <div class="skill-cat-icon icon-purple">🤖</div>
-        <div class="skill-cat-title">AI & Programming</div>
+        <div class="skill-cat-title">Python, AI &amp; Programming</div>
         <div class="skill-tags">
           <span class="skill-tag">Python</span>
-          <span class="skill-tag">Prompt Engineering</span>
-          <span class="skill-tag">OOP</span>
-          <span class="skill-tag">C/C++</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">scikit-learn</span>
+          <span class="skill-tag">Matplotlib</span>
+          <span class="skill-tag">Object-Oriented Programming (OOP)</span>
+          <span class="skill-tag">AI Prompting</span>
+          <span class="skill-tag">GitHub</span>
         </div>
       </div>
       <div class="skill-category reveal reveal-delay-2">
-        <div class="skill-cat-icon icon-teal">🗄️</div>
-        <div class="skill-cat-title">Development & Databases</div>
+        <div class="skill-cat-icon icon-teal">💡</div>
+        <div class="skill-cat-title">Core &amp; Soft Skills</div>
         <div class="skill-tags">
           <span class="skill-tag">SQL</span>
-          <span class="skill-tag">Streamlit</span>
-          <span class="skill-tag">NLP (SpaCy)</span>
-          <span class="skill-tag">VBA Macros</span>
+          <span class="skill-tag">Problem Solving</span>
+          <span class="skill-tag">Communication</span>
+          <span class="skill-tag">Teamwork</span>
+          <span class="skill-tag">Time Management</span>
         </div>
       </div>
     </div>
@@ -399,73 +420,99 @@
 </section>
 <div class="section-divider"></div>
 
+<!-- EDUCATION SECTION -->
+<section id="education">
+  <div class="container">
+    <div class="reveal" style="text-align:center; max-width:540px; margin:0 auto 3rem;">
+      <span class="section-label">Academic Background</span>
+      <h2 class="section-title">Education</h2>
+    </div>
+    
+    <div class="timeline-wrapper reveal">
+      <div class="center-axis-line"></div>
+      
+      <!-- Item 1: Right Side -->
+      <div class="timeline-row row-right">
+        <div class="timeline-empty"></div>
+        <div class="timeline-node"></div>
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="tl-role">Bachelor of Computer Applications (BCA)</div>
+            <div class="tl-org">Sandip University, Nashik</div>
+            <div class="tl-date">2023 — 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2: Left Side -->
+      <div class="timeline-row row-left">
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="tl-role">Senior Secondary (XII) — Science</div>
+            <div class="tl-org" style="margin-bottom: 4px;">HPT Arts &amp; RYK Science College</div>
+            <div style="font-size: 0.75rem; color: var(--text3); line-height: 1.5;">Maharashtra State Board<br>Score: <span style="color: var(--accent3); font-weight: 600;">61.00%</span></div>
+            <div class="tl-date">2023</div>
+          </div>
+        </div>
+        <div class="timeline-node"></div>
+        <div class="timeline-empty"></div>
+      </div>
+
+      <!-- Item 3: Right Side -->
+      <div class="timeline-row row-right">
+        <div class="timeline-empty"></div>
+        <div class="timeline-node"></div>
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="tl-role">Secondary (X)</div>
+            <div class="tl-org" style="margin-bottom: 4px;">Shri Chhatarapati Shivaji Vidyalaya</div>
+            <div style="font-size: 0.75rem; color: var(--text3); line-height: 1.5;">Maharashtra State Board<br>Score: <span style="color: var(--accent3); font-weight: 600;">74.80%</span></div>
+            <div class="tl-date">2021</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE SECTION -->
 <section id="experience">
   <div class="container">
     <div class="reveal" style="text-align:center; max-width:540px; margin:0 auto 3rem;">
-      <span class="section-label">Journey</span>
-      <h2 class="section-title">Experience &amp; Education</h2>
+      <span class="section-label">Professional Journey</span>
+      <h2 class="section-title">Experience</h2>
     </div>
-    <div class="exp-grid">
-      <div class="reveal">
-        <div class="exp-col-title">🧑‍💼 Professional Timeline</div>
-        <div class="timeline" id="exp-timeline">
-          <div class="timeline-item">
-            <div class="tl-dot-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
-            <div class="tl-content">
-              <div class="tl-role">Internship: Conversational Data Analysis with LLMs</div>
-              <div class="tl-org">Edunet Foundation (AICTE, VOIS/Vodafone Idea Foundation, Connecting Dreams Foundation)</div>
-              <div class="tl-date">Sep 2025 — Oct 2025</div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-dot-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
-            <div class="tl-content">
-              <div class="tl-role">Trainee AI &amp; BI Analyst</div>
-              <div class="tl-org">Skill Development Center · Nashik</div>
-              <div class="tl-date">Current</div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-            <div class="tl-content">
-              <div class="tl-role">Data Analytics Intern</div>
-              <div class="tl-org">Edunet Foundation</div>
-              <div class="tl-date">Internship</div>
-            </div>
+    
+    <div class="timeline-wrapper reveal">
+      <div class="center-axis-line"></div>
+      
+      <!-- Item 1: Right Side -->
+      <div class="timeline-row row-right">
+        <div class="timeline-empty"></div>
+        <div class="timeline-node"></div>
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="tl-role">Trainee AI &amp; BI Analyst</div>
+            <div class="tl-org">Skill Development Center · Nashik</div>
+            <div class="tl-date">Current</div>
           </div>
         </div>
       </div>
-      <div class="reveal reveal-delay-1">
-        <div class="exp-col-title">🎓 Academic Timeline</div>
-        <div class="timeline" id="edu-timeline">
-          <div class="timeline-item">
-            <div class="tl-dot-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
-            <div class="tl-content">
-              <div class="tl-role">Bachelor of Computer Applications (BCA)</div>
-              <div class="tl-org">Sandip University, Nashik</div>
-              <div class="tl-date">2023 — 2026</div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-dot-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
-            <div class="tl-content">
-              <div class="tl-role">Senior Secondary (XII) — Science</div>
-              <div class="tl-org" style="margin-bottom: 4px;">HPT Arts &amp; RYK Science College</div>
-              <div style="font-size: 0.75rem; color: var(--text3); line-height: 1.5;">Maharashtra State Board<br>Score: <span style="color: var(--accent3); font-weight: 600;">61.00%</span></div>
-              <div class="tl-date">2023</div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-            <div class="tl-content">
-              <div class="tl-role">Secondary (X)</div>
-              <div class="tl-org" style="margin-bottom: 4px;">Shri Chhatarapati Shivaji Vidyalaya</div>
-              <div style="font-size: 0.75rem; color: var(--text3); line-height: 1.5;">Maharashtra State Board<br>Score: <span style="color: var(--accent3); font-weight: 600;">74.80%</span></div>
-              <div class="tl-date">2021</div>
-            </div>
+
+      <!-- Item 2: Left Side -->
+      <div class="timeline-row row-left">
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="tl-role">Data Analytics Intern</div>
+            <div class="tl-org">Edunet Foundation</div>
+            <div class="tl-date">Internship</div>
           </div>
         </div>
+        <div class="timeline-node"></div>
+        <div class="timeline-empty"></div>
       </div>
+
     </div>
   </div>
 </section>
